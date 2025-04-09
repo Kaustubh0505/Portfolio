@@ -1,0 +1,55 @@
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    font-weight: bold;
+    background-color: #101423;
+
+
+}
+
+.span1{
+    margin-left: 15px;
+    font-size: 25px;
+    background-color: #101423;
+
+
+}
+
+.ul1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    list-style: none;
+    font-size:23px;
+    margin-right:20px;
+    background-color: #101423;
+
+
+}
+
+.ul1 > li{
+    background-color: #101423;
+    transition: 0.2s ease;
+}
+
+li:hover{
+    scale: 1.2;
+    cursor: pointer;
+
+}
+
+
+
+.ul1  > li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.ul1 > li>  a {
+    text-decoration: none;
+    background-color: #101423;
+}
