@@ -1,69 +1,175 @@
-import React, { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
-import './Home.css';
-import myImage from '../../assets/ghibli.png';
+import React from "react";
+import { motion } from "framer-motion";
+import { useTypingEffect } from "../../hooks/useTypingEffect.jsx";
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const imageVariant = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
 
 const Home = () => {
-  const typedElement = useRef(null);
-
-  useEffect(() => {
-    const typed = new Typed(typedElement.current, {
-      strings: ["Hello, I am Kaustubh Hiwanj"],
-      typeSpeed: 60,
-      backSpeed: 30,
-      loop: true,
-    });
-
-    return () => typed.destroy();
-  }, []);
+  const typedName = useTypingEffect("Kaustubh Hiwanj");
 
   return (
-    <div className="home" id="home">
-      <div className="home1">
-        <p className="name">
-          <span ref={typedElement}></span>
-        </p>
+    <section
+      className="min-h-screen flex items-center pt-20 bg-white"
+      id="home"
+    >
+      <div className="container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        <p className="about">
-          I'm a first year undergrad studying Computer Science with Artificial Intelligence at Newton School of Technology. I'm passionate about coding and learning new things.
-        </p>
 
-        <div className="img">
-          <div className="imgs">
-            <a href="https://github.com/Kaustubh0505" target="_blank" rel="noopener noreferrer">
-              <svg height="50" width="50" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
-                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64
-                -.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68
-                0 012.01-.27c.68 0 1.36.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82
-                1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 
-                0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-              </svg>
-            </a>
-            <div className="imgs">
-              <a href="https://www.linkedin.com/in/kaustubh-hiwanj-429b302b1/" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn" width="40" />
-              </a>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              variants={fadeUp}
+              className="text-xl text-slate-600 font-medium mb-2"
+            >
+              Hello, I'm
+            </motion.div>
+
+
+            <motion.h1
+              variants={fadeUp}
+              className="text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-2 tracking-tight min-h-[72px]"
+            >
+              {typedName}
+              <span className="ml-1 text-primary animate-pulse">|</span>
+            </motion.h1>
+
+            <motion.h2
+              variants={fadeUp}
+              className="text-2xl lg:text-3xl font-semibold text-primary mb-6"
+            >
+              Full-Stack Developer
+            </motion.h2>
+
+            <motion.p
+              variants={fadeUp}
+              className="text-lg text-slate-600 leading-relaxed mb-8 max-w-xl"
+            >
+              Building scalable web applications with modern technologies.
+              I transform complex problems into elegant, user-friendly solutions
+              that drive business impact.
+            </motion.p>
+
+
+            <motion.div variants={fadeUp} className="flex gap-4 mb-10">
+              <motion.a
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.97 }}
+                href="#projects"
+                className="px-8 py-3.5 text-base font-semibold rounded-lg border-2 border-slate-200 hover:border-primary hover:text-primary transition-all"
+              >
+                View My Work
+              </motion.a>
+
+              <motion.a
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.97 }}
+                href="#contact"
+                className="px-8 py-3.5 text-base font-semibold rounded-lg border-2 border-slate-200 hover:border-primary hover:text-primary transition-all"
+              >
+                Get In Touch
+              </motion.a>
+            </motion.div>
+
+{/* icons */}
+            <motion.div
+              variants={fadeUp}
+              className="flex gap-6 items-center"
+            >
+
+              <motion.a
+                whileHover={{ y: -4, scale: 1.1 }}
+                href="https://github.com/Kaustubh0505"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <img
+                  src="https://cdn.simpleicons.org/github/181717"
+                  alt="GitHub"
+                  className="w-7 h-7"
+                />
+              </motion.a>
+
+
+              <motion.a
+                whileHover={{ y: -4, scale: 1.1 }}
+                href="https://leetcode.com/Kaustubh5555"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LeetCode"
+              >
+                <img
+                  src="https://cdn.simpleicons.org/leetcode/FFA116"
+                  alt="LeetCode"
+                  className="w-7 h-7"
+                />
+              </motion.a>
+
+
+              <motion.a
+                whileHover={{ y: -4, scale: 1.1 }}
+                href="https://www.linkedin.com/in/kaustubh-hiwanj-429b302b1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                  alt="LinkedIn"
+                  className="w-7 h-7"
+                />
+              </motion.a>
+            </motion.div>
+          </motion.div>
+
+          {/* RIGHT IMAGE */}
+          <motion.div
+            variants={imageVariant}
+            initial="hidden"
+            animate="visible"
+            className="flex justify-center items-center"
+          >
+            <div className="relative w-96 h-96 lg:w-[400px] lg:h-[400px] rounded-full bg-gradient-to-br from-primary to-accent-blue p-2 shadow-2xl">
+              <img
+                src="/kaustubh.png"
+                alt="Kaustubh Hiwanj"
+                className="w-full h-full rounded-full object-cover bg-white"
+              />
             </div>
-
-            <div className="imgs">
-              <a href="https://leetcode.com/Kaustubh5555" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode" width="40" />
-              </a>
-            </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
-
-      <div className="home2">
-        <div className="avatar">
-          <img src={myImage} alt="Avatar" />
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,6 +5,8 @@ import Projects from './components/Projects/Projects.jsx';
 import Contact from "./components/Contact/Contact.jsx"
 import AboutMe from './components/About_me/About.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
+import Experience from './components/Experience/Experience.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
 
@@ -12,11 +14,12 @@ function App() {
     <div className="main">
       <Navbar />
       <Home />
+      <AboutMe />
       <Skills />
       <Projects />
-      <AboutMe />
+      <Experience />
       <Contact />
-
+      <Footer />
     </div>
   )
 }
