@@ -65,7 +65,48 @@ const Experience = () => {
           {/* Vertical Line */}
           <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent-blue" />
 
-          {/* ITEM 1 */}
+          {/* ITEM 1: Internship */}
+          <motion.div variants={slideRight} className="relative mb-12 pl-12">
+            <div className="absolute -left-7 top-2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-[0_0_0_2px_#2563eb]" />
+            
+            <motion.div
+              whileHover={{ x: 8 }}
+              className="bg-[#f1f9f1] p-8 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all"
+            >
+              <div className="flex justify-between items-start mb-3 flex-wrap gap-4">
+                <h3 className="text-xl font-bold text-slate-900">
+                  Web Developer
+                </h3>
+                <span className="text-sm font-semibold text-primary bg-white px-3 py-1 rounded-md">
+                  Jun 25 - Jul 25
+                </span>
+              </div>
+
+              <p className="text-base font-semibold text-slate-600 mb-2">
+                Alphavima Technologies Private Limited
+              </p>
+              <p className="text-sm text-slate-500 mb-4 italic">
+                Internship
+              </p>
+
+              <ul className="list-none p-0 m-0">
+                {[
+                  "Designed and built an employee dashboard for managing and viewing employee-related data",
+                  "Developed and implemented an invoice downloading feature to streamline billing and record keeping",
+                  "Integrated Twilio API for SMS notifications and communication within the system",
+                ].map((point, idx) => (
+                  <li
+                    key={idx}
+                    className="text-sm text-slate-600 leading-relaxed pl-6 relative mb-2 before:content-['▸'] before:absolute before:left-0 before:text-primary before:font-bold"
+                  >
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
+
+          {/* ITEM 2: Education */}
           <motion.div variants={slideRight} className="relative mb-12 pl-12">
             <div className="absolute -left-7 top-2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-[0_0_0_2px_#2563eb]" />
             
