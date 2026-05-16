@@ -1,5 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+
+import { SiLeetcode } from "react-icons/si";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
@@ -13,6 +19,24 @@ const fadeUp = {
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const socialLinks = [
+    {
+      href: "https://github.com/Kaustubh0505",
+      label: "GitHub",
+      icon: <FaGithub />,
+    },
+    {
+      href: "https://www.linkedin.com/in/kaustubh-hiwanj-429b302b1/",
+      label: "LinkedIn",
+      icon: <FaLinkedin />,
+    },
+    {
+      href: "https://leetcode.com/Kaustubh5555",
+      label: "LeetCode",
+      icon: <SiLeetcode />,
+    },
+  ];
+
   return (
     <motion.footer
       variants={fadeUp}
@@ -24,7 +48,7 @@ const Footer = () => {
       <div className="container">
         <div className="flex justify-between items-center flex-wrap gap-6">
 
-
+          {/* Left */}
           <motion.div
             variants={fadeUp}
             className="flex flex-col gap-1"
@@ -32,57 +56,29 @@ const Footer = () => {
             <p className="text-sm text-white/90">
               &copy; {currentYear} Kaustubh Hiwanj. All rights reserved.
             </p>
+
             <p className="text-xs text-white/70">
-              Built with React & modern web technologies
+              Built with React, AI & modern web technologies
             </p>
           </motion.div>
 
-{/* icon */}
+          {/* Social Icons */}
           <motion.div
             variants={fadeUp}
-            className="flex gap-6 items-center"
+            className="flex gap-5 items-center"
           >
-            {[
-              {
-                href: "https://github.com/Kaustubh0505",
-                label: "GitHub",
-                icon: (
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387..." />
-                ),
-              },
-              {
-                href: "https://www.linkedin.com/in/kaustubh-hiwanj-429b302b1/",
-                label: "LinkedIn",
-                icon: (
-                  <path d="M20.447 20.452h-3.554v-5.569..." />
-                ),
-              },
-              {
-                href: "https://leetcode.com/Kaustubh5555",
-                label: "LeetCode",
-                icon: (
-                  <path d="M16.102 17.93l-2.697 2.607..." />
-                ),
-              },
-            ].map((item, idx) => (
+            {socialLinks.map((item, idx) => (
               <motion.a
                 key={idx}
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                whileHover={{ y: -4 }}
+                whileHover={{ y: -4, scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="text-white/80 hover:text-white transition-all flex items-center justify-center"
+                className="w-11 h-11 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-xl text-white/80 hover:text-white transition-all duration-300"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  {item.icon}
-                </svg>
+                {item.icon}
               </motion.a>
             ))}
           </motion.div>

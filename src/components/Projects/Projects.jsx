@@ -20,54 +20,81 @@ const staggerContainer = {
 };
 
 const Projects = () => {
-    const projects = [
-        {
-          title: "OpenBazar – Full-Stack E-Commerce Marketplace",
-          problem:
-            "Traditional e-commerce platforms often lack flexibility for thrift selling, seller management, and modern user experience, while small sellers struggle with inventory, payments, and visibility.",
-          solution:
-            "Built a full-stack e-commerce marketplace with customer, seller, and admin roles. Implemented secure authentication, product listings, cart & checkout flow, Razorpay payments, thrift marketplace, image uploads via Cloudinary, and an admin dashboard for platform management.",
-          techStack: [
-            "Next.js",
-            "React",
-            "Tailwind CSS",
-            "Framer Motion",
-            "Node.js",
-            "Express.js",
-            "MongoDB",
-            "JWT",
-            "Razorpay",
-            "Cloudinary"
-          ],
-          impact:
-            "Provides a scalable, real-world e-commerce platform supporting both new and pre-owned product sales, demonstrating end-to-end system design, secure payments, and production-ready architecture.",
-          github: "https://github.com/Kaustubh0505/OpenBazar",
-          demo: "https://openbazar.kaustubh.codes",
-        },
+  const projects = [
+    {
+      title: "OpenBazar – Full-Stack E-Commerce Marketplace",
+      problem:
+        "Traditional e-commerce platforms often lack flexibility for thrift selling, seller management, and modern user experience, while small sellers struggle with inventory, payments, and visibility.",
+      solution:
+        "Built a full-stack e-commerce marketplace with customer, seller, and admin roles. Implemented secure authentication, product listings, cart & checkout flow, Razorpay payments, thrift marketplace, image uploads via Cloudinary, and an admin dashboard for platform management.",
+      techStack: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "Razorpay",
+        "Cloudinary",
+      ],
+      impact:
+        "Provides a scalable, real-world e-commerce platform supporting both new and pre-owned product sales, demonstrating end-to-end system design, secure payments, and production-ready architecture.",
+      github: "https://github.com/Kaustubh0505/OpenBazar",
+      demo: "https://openbazar.kaustubh.codes/",
+    },
+
       
-        {
-          title: "AttendEase – Attendance Management System",
-          problem:
-            "Manual attendance tracking is error-prone, time-consuming, and lacks real-time accessibility, especially in academic and organizational environments with multiple user roles.",
-          solution:
-            "Developed a role-based attendance management system with secure authentication for teachers and students. Implemented student management, daily attendance tracking, search & filtering, pagination, and attendance analytics using a RESTful backend.",
-          techStack: [
-            "React",
-            "React Router",
-            "Tailwind CSS",
-            "Node.js",
-            "Express.js",
-            "MongoDB",
-            "Prisma",
-            "JWT Authentication"
-          ],
-          impact:
-            "Automates attendance workflows, improves data accuracy, and enables real-time access and reporting, showcasing strong backend API design and full-stack CRUD implementation.",
-          github: "https://github.com/Kaustubh0505/face_recognation",
-          demo: "https://face-recognation-omega.vercel.app", 
-        },
-      ];
-      
+    {
+      title: "Analyst AI – Multi-Agent Data Analysis Platform",
+      problem:
+        "Data analysis workflows are often time-consuming and require technical expertise for cleaning datasets, generating insights, creating visualizations, and answering business-related questions from raw CSV files.",
+      solution:
+        "Built a multi-agent AI-powered data analysis platform that automates the complete analytics pipeline. Implemented AI-driven data cleaning, exploratory data analysis, insight generation, interactive visualizations, natural language querying, report generation, and dataset manipulation using LangGraph-orchestrated AI agents with a FastAPI backend and React frontend.",
+      techStack: [
+        "FastAPI",
+        "LangGraph",
+        "LangChain",
+        "Google Gemini",
+        "React 19",
+        "React Router v7",
+        "TypeScript",
+        "Tailwind CSS",
+        "Pandas",
+        "Recharts",
+        "Axios",
+      ],
+      impact:
+        "Transforms raw datasets into actionable business insights through an intelligent multi-agent workflow, reducing manual analysis effort while enabling interactive exploration, automated reporting, and AI-assisted decision-making for non-technical users.",
+      github: "https://github.com/Kaustubh0505/Analyst_AI",
+      demo: "https://analystai.kaustubh.codes",
+    },
+  
+    {
+      title: "Customer Retention Assistant – AI-Powered Churn Prediction System",
+      problem:
+        "Businesses often struggle to identify customers likely to churn and lack actionable, data-driven retention strategies. Traditional churn prediction systems provide probabilities but fail to deliver personalized recommendations or explainable insights for customer retention teams.",
+      solution:
+        "Built an AI-powered customer retention assistant that combines Machine Learning with Agentic RAG (Retrieval-Augmented Generation). Implemented a Random Forest-based churn prediction engine, personalized retention strategy generation using LangChain and Gemini, conversational follow-up support, and a Streamlit dashboard for real-time customer health analysis.",
+      techStack: [
+        "Python",
+        "Scikit-Learn",
+        "Pandas",
+        "NumPy",
+        "LangChain",
+        "Google Gemini",
+        "ChromaDB",
+        "Streamlit",
+        "Custom CSS",
+      ],
+      impact:
+        "Provides businesses with an intelligent, explainable churn analysis platform that predicts customer attrition and recommends evidence-based retention strategies, enabling proactive decision-making and improved customer engagement.",
+      github: "https://github.com/Kaustubh0505/Customer-Churn-Prediction-ML",
+      demo: "https://customer-churn-prediction-ml-123.streamlit.app/",
+    },
+
+  ];  
 
   return (
     <section className="section bg-[#f1f9f1]" id="projects">

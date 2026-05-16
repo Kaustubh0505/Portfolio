@@ -51,7 +51,7 @@ const Experience = () => {
           viewport={{ once: true }}
           className="section-subtitle"
         >
-          Academic foundation and professional growth journey
+          Academic foundation, AI learning journey, and professional experience
         </motion.p>
 
         {/* Timeline */}
@@ -62,38 +62,42 @@ const Experience = () => {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto mt-12 relative pl-8"
         >
+
           {/* Vertical Line */}
           <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent-blue" />
 
-          {/* ITEM 1: Internship */}
+          {/* Internship */}
           <motion.div variants={slideRight} className="relative mb-12 pl-12">
             <div className="absolute -left-7 top-2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-[0_0_0_2px_#2563eb]" />
-            
+
             <motion.div
               whileHover={{ x: 8 }}
-              className="bg-[#f1f9f1] p-8 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all"
+              className="bg-[#f1f9f1] p-8 rounded-2xl border border-slate-200 hover:border-primary hover:shadow-lg transition-all"
             >
               <div className="flex justify-between items-start mb-3 flex-wrap gap-4">
                 <h3 className="text-xl font-bold text-slate-900">
-                  Web Developer
+                  Web Developer Intern
                 </h3>
+
                 <span className="text-sm font-semibold text-primary bg-white px-3 py-1 rounded-md">
-                  Jun 25 - Jul 25
+                  Jun 2025 - Jul 2025
                 </span>
               </div>
 
               <p className="text-base font-semibold text-slate-600 mb-2">
                 Alphavima Technologies Private Limited
               </p>
+
               <p className="text-sm text-slate-500 mb-4 italic">
-                Internship
+                Internship Experience
               </p>
 
               <ul className="list-none p-0 m-0">
                 {[
-                  "Designed and built an employee dashboard for managing and viewing employee-related data",
-                  "Developed and implemented an invoice downloading feature to streamline billing and record keeping",
-                  "Integrated Twilio API for SMS notifications and communication within the system",
+                  "Designed and developed an employee dashboard for managing employee-related data and workflows",
+                  "Implemented invoice generation and downloading functionality for streamlined billing operations",
+                  "Integrated Twilio API for automated SMS notifications and communication features",
+                  "Worked on frontend and backend integration while improving API handling and UI responsiveness",
                 ].map((point, idx) => (
                   <li
                     key={idx}
@@ -106,35 +110,38 @@ const Experience = () => {
             </motion.div>
           </motion.div>
 
-          {/* ITEM 2: Education */}
+          {/* Education */}
           <motion.div variants={slideRight} className="relative mb-12 pl-12">
             <div className="absolute -left-7 top-2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-[0_0_0_2px_#2563eb]" />
-            
+
             <motion.div
               whileHover={{ x: 8 }}
-              className="bg-[#f1f9f1] p-8 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all"
+              className="bg-[#f1f9f1] p-8 rounded-2xl border border-slate-200 hover:border-primary hover:shadow-lg transition-all"
             >
               <div className="flex justify-between items-start mb-3 flex-wrap gap-4">
                 <h3 className="text-xl font-bold text-slate-900">
-                  Bachelor of Technology
+                  Bachelor of Technology (B.Tech)
                 </h3>
+
                 <span className="text-sm font-semibold text-primary bg-white px-3 py-1 rounded-md">
-                  2025 - Present
+                  2024 - 2028
                 </span>
               </div>
 
               <p className="text-base font-semibold text-slate-600 mb-2">
                 Computer Science with Artificial Intelligence
               </p>
+
               <p className="text-sm text-slate-500 mb-4 italic">
-                Newton School of Technology, Rishihood University, Delhi
+                Newton School of Technology, Rishihood University
               </p>
 
               <ul className="list-none p-0 m-0">
                 {[
-                  "Focusing on full-stack development, algorithms, and AI fundamentals",
-                  "Building practical projects and contributing to open-source",
-                  "Maintaining strong academic performance while developing real-world skills",
+                  "Studying full-stack development, data structures & algorithms, and artificial intelligence fundamentals",
+                  "Building AI-powered applications using LangChain, LangGraph, RAG pipelines, and LLM workflows",
+                  "Exploring machine learning, vector databases, prompt engineering, and agentic AI systems",
+                  "Developing scalable real-world projects focused on AI automation and modern web technologies",
                 ].map((point, idx) => (
                   <li
                     key={idx}
@@ -147,32 +154,34 @@ const Experience = () => {
             </motion.div>
           </motion.div>
 
-          {/* ITEM 2 */}
+          {/* Self Learning */}
           <motion.div variants={slideRight} className="relative pl-12">
             <div className="absolute -left-7 top-2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-[0_0_0_2px_#2563eb]" />
 
             <motion.div
               whileHover={{ x: 8 }}
-              className="bg-[#f1f9f1] p-8 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all"
+              className="bg-[#f1f9f1] p-8 rounded-2xl border border-slate-200 hover:border-primary hover:shadow-lg transition-all"
             >
               <div className="flex justify-between items-start mb-3 flex-wrap gap-4">
                 <h3 className="text-xl font-bold text-slate-900">
                   Self-Directed Learning
                 </h3>
+
                 <span className="text-sm font-semibold text-primary bg-white px-3 py-1 rounded-md">
-                  Ongoing
+                  2026 - Present
                 </span>
               </div>
 
               <p className="text-base font-semibold text-slate-600 mb-4">
-                Full-Stack Development & Problem Solving
+                AI Engineering, Full-Stack Development & Problem Solving
               </p>
 
               <ul className="list-none p-0 m-0">
                 {[
-                  "Completed multiple personal projects demonstrating technical proficiency",
-                  "Regular practice on competitive programming platforms",
-                  "Staying current with industry trends and best practices",
+                  "Learning advanced AI concepts including LangChain, LangGraph, Retrieval-Augmented Generation (RAG), and LLM orchestration",
+                  "Building multi-agent AI systems, AI-powered analytics platforms, and intelligent automation tools",
+                  "Practicing data structures and algorithms regularly through personal projects and coding platforms",
+                  "Exploring modern backend architectures, vector databases, and scalable AI application deployment",
                 ].map((point, idx) => (
                   <li
                     key={idx}

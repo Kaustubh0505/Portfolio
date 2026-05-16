@@ -66,16 +66,15 @@ const Home = () => {
               variants={fadeUp}
               className="text-2xl lg:text-3xl font-semibold text-primary mb-6"
             >
-              Full-Stack Developer
+              AI-Focused Full-Stack Developer
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
               className="text-lg text-slate-600 leading-relaxed mb-8 max-w-xl"
             >
-              Building scalable web applications with modern technologies.
-              I transform complex problems into elegant, user-friendly solutions
-              that drive business impact.
+              Building intelligent, scalable applications powered by modern AI and web technologies.
+              I transform complex problems into smart, data-driven solutions that deliver real business impact.
             </motion.p>
 
 
